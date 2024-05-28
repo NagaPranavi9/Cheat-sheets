@@ -1,0 +1,209 @@
+<!-- HTML Boiler plate code -->
+
+<!DOCTYPE html>
+<!-- A doctype is simply a way to tell the browser — or any other parser — what type of document it’s looking at.
+     In the case of HTML files, it means the specific version and flavor of HTML. -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>
+
+    <!-- The div tag or division tag is used to make blocks or divisions in the document. -->
+    <div> This is div block </div>
+
+    <!-- The span is a container for inline content -->
+    <span>This is span block</span>
+
+    <!-- The p tag is used to create a paragraph in HTML -->
+    <p> This is paragaraph </p>
+
+    <!-- The pre tag represents pre-formatted text.
+    preserves both spaces and line breaks exactly as they are in the HTML code. -->
+    <pre> 
+    This is an example of preformatted text.
+    Notice the leading spaces and line breaks.
+        
+        function helloWorld() {
+            console.log("Hello, world!");
+        } 
+    </pre>
+
+    <!-- The code tag is used to represent source codes/fragment of computer code in HTML -->
+    <code> System.out.println("Hello World"); </code>
+    <p>This is an inline code snippet: <code>console.log('Hello, world!');</code></p>
+
+    <b>I'm bold text</b><br>
+    <strong>I'm important text</strong><br/>
+    <i>I'm italic text</i><br>
+    <em>Emphasized text</em>
+    <sub>Subscript</sub>
+    <sup>Superscript</sup>
+
+    <!-- lists -->
+    <!-- ordered lists  -->
+    <ol>
+        <li>Data 1</li>
+        <li>Data 2</li>
+        <li>Data 3</li>
+    </ol>
+
+    <!-- unordered list -->
+    <ul>
+        <li>list 1</li>
+        <li>list 2</li>
+        <li>list 3</li>
+    </ul>
+    
+    <!-- media -->
+    <!-- audio : embed the sound content in the document -->
+    <audio controls>
+        <source src="demo.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- video -->
+    <video width="480" height="320" controls>
+        <source src="demo_move.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- image -->
+    <img src="Source_of_image" alt="Alternate text">
+
+    <!-- table -->
+    <table>
+        <caption>Demo Table</caption>
+        <thead>
+            <tr>
+                <th>COLUMN 1</th>
+                <th colspan="2">COLUMN 2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>DATA 1</td>
+                <td>DATA 2</td>
+                <td>DATA 3</td>
+            </tr>
+            <tr>
+                <td>DATA 4</td>
+                <td>DATA 5</td>
+                <td>DATA 6</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>&nbsp;</td>
+                <td>DATA</td>
+                <td>DATA</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <!-- links -->
+    <a href="https://www.google.com/">GOOGLE</a>
+
+    <form action="/action.php" method="post">
+        <input name="sample" type="text" placeholder="Enter username"/><br>
+        <input name="number" type="number" placeholder="Enter the number"/><br>
+        <textarea cols="20" rows="5" name="comment">Comment</textarea><br>
+        <label><input name="terms" type="checkbox">terms and conditions</label><br/>
+        <input type="button" value="submit"/>
+    </form>
+
+    <!-- input -->
+    <input type="text" name="username" placeholder="Enter Username">
+    <input type="checkbox" name="agree" value="yes"> I agree<br>
+    <input type="radio" name="gender" value="male">Male<br><input type="radio" name="gender" value="female">Female<br>
+    <!-- button -->
+    <button type="button"> Click Me</button>
+
+    <select name="country"><option name="US">USA</option><option name="canada">CANADA</option></select>
+    
+    <!-- text area -->
+    <textarea name="comment" cols="20" rows="5">Comments</textarea>
+
+    <!-- file input -->
+    <input type="file" name="fileupload"><br>
+
+    <!-- range input -->
+    <input type="range" max="0" min="100" name="volume"><br>
+
+    <input type="number" name="quantity" min="1" max="10"><br>
+
+    <input type="email" name="email" placeholder="Enter Email"><br>
+
+    <input type="search" name="query" placeholder="Search"><br>
+
+    <input type="url" name="website" placeholder="Enter URL"><br>
+
+    <input type="date" name="birthday"><br>
+
+    <!-- Some symbols are not directly present on the keyboard, but there are some ways to use them in HTML documents. 
+        We can display them either by entity name, decimal, or hexadecimal value. -->
+
+    <!-- Copyright Symbol (©) -->
+    &copy;
+    <!-- Less than (<) -->
+    &lt;
+    <!-- Greater than (>) -->
+    &gt;
+    <!-- Ampersand (&) -->
+    &amp;
+    <!-- Dollar ($) -->
+    &dollar;
+
+    <!-- defines a section in the document  -->
+    <section>This is a section</section>
+
+    <!-- represents self-contained content -->
+    <article> Enter your data here </article>
+
+    <!-- used to place content in the sidebar -->
+    <aside> Your data </aside>
+
+    <!-- meta tags -->
+    <meta name="description" content="This is a description of the page">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Author Name">
+
+    <!-- CSS integration can be done to style our HTML document using internal or external CSS. -->
+    <!-- internal css -->
+    <style>
+      body{
+        background-color: rgb(207, 207, 219);
+      }  
+    </style>
+
+    <!-- external css -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <!-- accesibility -->
+    <label for="name">Name:</label> <input type="text" id="name" name="name">
+
+    <!-- webpage to adapt to different screen sizes using CSS media queries. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+        @media (max-width: 600px) {
+            body { font-size: 18px; }
+        }
+    </style>
+
+    <!-- java script integration -->
+    <script>
+        alert('Hello, World!');
+    </script>
+    <script src="script.js"></script>
+      
+
+</html>
+
