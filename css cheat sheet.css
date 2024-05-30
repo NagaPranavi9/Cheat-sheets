@@ -1,0 +1,41 @@
+/* CSS - CSS stands for Cascading Style Sheets. It is a stylesheet language that is used to describe 
+the visual presentation of a web page written in HTML.
+HTML creates the structure of the page, while CSS adds styling to that structure.  */
+
+
+/* internal css  - directly use style tage in html*/
+
+/* <head>
+    <style>
+        h1{
+            color: blue;
+            background-color: rgb(203, 229, 230);
+            font-style: italic;
+        }
+
+        p{
+            color: aqua;
+            background-color: azure;
+        }
+        div{
+            background-color: blueviolet;
+        }
+        span{
+            background-color: chartreuse;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hi everyone</h1>
+    <p>I am pranavi</p>
+    <p> I am a developer. <div>Glad to meet u all</div>I am from INDIA
+    <span> SO happy to be here in india</span> I Love india</p>
+</body>
+
+</html> */
+
+/* External style sheet */
+
+/* <link rel="stylesheet" href="style.css"> in html */
+

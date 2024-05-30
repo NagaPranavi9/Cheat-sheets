@@ -1,3 +1,10 @@
+<!-- HTML- HTML is the language of the web, used to create websites.
+HTML defines the barebone structure or layout of web pages that we see on the Internet.
+HTML consists of a set of tags contained within an HTML document -->
+
+<!--  'Hypertext' refers to the linking of text with other documents, while 'markup language' denotes a language that utilizes a specific set of tags.
+Thus, HTML is the practice of displaying text, graphics, audio, video etc. in a certain way using special tags. -->
+
 <!-- HTML Boiler plate code -->
 
 <!DOCTYPE html>
@@ -203,7 +210,350 @@
         alert('Hello, World!');
     </script>
     <script src="script.js"></script>
-      
+    <br>
+    <!-- svg in html -->
+    <!-- SVG stands for Scalable Vector Graphics
+    SVG is used to define vector-based graphics for the Web
+    SVG defines graphics in XML format
+    Each element and attribute in SVG files can be animated -->
+
+    <!-- svg shapes -->
+
+    <!-- Rectangle <rect>
+        Circle <circle>
+        Ellipse <ellipse>
+        Line <line>
+        Polyline <polyline>
+        Polygon <polygon>
+        Path <path> -->
+
+    <svg width="300" height="130">
+        <!-- <rect width="200" height="100" x="20" y="20" rx="10" ry="10" fill="green" style="fill:aqua;stroke:red;stroke-width:3px" /> -->
+        <!-- Rectangle With Opacity -->
+        <rect width="200" height="100" x="20" y="20" rx="10" ry="10" fill="green" style="fill:aqua;stroke:red;stroke-width:3px;fill-opacity:0.1;stroke-opacity:0.9" />
+        <circle cx="75" cy="50" r="40" fill="yellow" stroke="green" stroke-width="3" opacity="0.5"/>
+        <!-- <text x="75" y="60" font-size="30" text-anchor="middle" fill="red">SVG</text> -->
+      </svg>
+
+      <br>
+
+      <svg height="140" width="500">
+        <!-- The rx attribute defines the x (horizontal) radius
+        The ry attribute defines the y (vertical) radius
+        The cx attribute defines the x-axis center of the ellipse
+        The cy attribute defines the y-axis center of the ellipse -->
+        <ellipse rx="100" ry="50" cx="120" cy="50" style="fill:yellow;stroke:green;stroke-width:3" />
+      </svg>
+      <br>
+      <svg height="150" width="500">
+        <ellipse cx="240" cy="100" rx="220" ry="30" fill="purple" />
+        <ellipse cx="220" cy="70" rx="190" ry="20" fill="lime" />
+        <ellipse cx="210" cy="45" rx="170" ry="15" fill="yellow" />
+      </svg>
+      <br>
+
+      <!-- creates a line from position (0,0) to (300,200) -->
+      <svg height="200" width="300">
+        <line x1="0" y1="0" x2="300" y2="200" style="stroke:red;stroke-width:2" />
+      </svg>
+    <br>
+      <!--horizontal line from position (0,10) to (250,10) -->
+      <svg height="50" width="300">
+        <line x1="0" y1="10" x2="250" y2="10" style="stroke:red;stroke-width:12" />
+      </svg>
+    <br>
+      <!-- vertical line -->
+      <svg height="210" width="300">
+        <line x1="0" y1="0" x2="0" y2="250" style="stroke:red;stroke-width:14"/>
+      </svg>
+
+      <!-- polygon -->
+      <svg height="220" width="500">
+        <polygon points="100,10 150,190 50,190" style="fill: blue;stroke:aqua;stroke: width 50px;"/>
+      </svg>
+      <br>
+
+      <svg height="220" width="500">
+        <polygon points="100,10 150,25 150,40 100,60 50,40 50,25" style="fill: blue;stroke:aqua;stroke: width 50px;"/>
+      </svg>
+
+      <br>
+      <!-- polyline -->
+      <svg height="210" width="500" xmlns="http://www.w3.org/2000/svg">
+        <polyline points="0,0 50,150 100,75 150,50 200,140 250,140"
+        style="fill:none;stroke:green;stroke-width:3" />
+      </svg>
+
+      <!-- path with set of commands which define the path-->
+      <!-- M = moveto (move from one point to another point)
+    L = lineto (create a line)
+    H = horizontal lineto (create a horizontal line)
+    V = vertical lineto (create a vertical line)
+    C = curveto (create a curve)
+    S = smooth curveto (create a smooth curve)
+    Q = quadratic Bézier curve (create a quadratic Bézier curve)
+    T = smooth quadratic Bézier curveto (create a smooth quadratic Bézier curve)
+    A = elliptical Arc (create a elliptical arc)
+    Z = closepath (close the path) -->
+    <br>
+    <svg height="400" width="450">
+        <path id="lineAB" d="M 100 350 l 150 -300" stroke="red" stroke-width="4"/>
+        <path id="lineBC" d="M 250 50 l 150 300" stroke="red" stroke-width="4"/>
+        <path id="lineMID" d="M 175 200 l 150 0" stroke="green" stroke-width="4"/>
+        <path id="lineAC" d="M 100 350 q 150 -300 300 0" stroke="blue" stroke-width="4" fill="none"/>
+        
+        <!-- Mark relevant points -->
+        <g stroke="black" stroke-width="3" fill="black">
+            <circle id="pointA" cx="100" cy="350" r="4" />
+            <circle id="pointB" cx="250" cy="50" r="4" />
+            <circle id="pointC" cx="400" cy="350" r="4" />
+        </g>
+        
+        <!-- Label the points -->
+        <g font-size="30" font-family="sans-serif" fill="green" text-anchor="middle">
+            <text x="100" y="350" dx="-30">A</text>
+            <text x="250" y="50" dy="-10">B</text>
+            <text x="400" y="350" dx="30">C</text>
+        </g>
+    </svg>
+
+    <br>
+    <!-- for a closed path we use Z at last -->
+    <svg height="210" width="400">
+        <path d="M150 5 L75 200 L225 200 Z"
+        style="fill:none;stroke:green;stroke-width:3" />
+      </svg>
+
+      <!-- text path -->
+
+      <svg height="200" width="350">
+        <path id="lineAC" d="M 30 180 q 150 -250 300 0" stroke="blue" stroke-width="2" fill="none"/>
+        <text style="fill:red;font-size:25px;">
+          <textPath href="#lineAC" startOffset="80">I love SVG! I love SVG!</textPath>
+        </text>
+      </svg>
+
+      <!-- we can link using a tag -->
+
+      <svg height="100" width="200">
+        <a href="https://www.w3schools.com/graphics/" target="_blank">
+          <circle r="45" cx="50" cy="50" fill="red" />
+        </a>
+      </svg>
+
+      <br>
+
+      <!-- image -->
+      <svg height="200" width="300">
+        <image height="200" width="300" href="pulpitrock.jpg" />
+      </svg>
+
+      <svg height="250" width="300">
+        <circle r="105" cx="150" cy="120" fill="lightblue" />
+        <image x="0" y="60" width="300" height="100" href="pulpitrock.jpg" />
+        <text x="84" y="180" fill="black">Pulpit Rock, Norway</text>
+      </svg>
+
+      <br>
+      <!-- start marker and end marker -->
+
+      <svg height="250" width="350">
+        <defs>
+          <marker id="circle" markerWidth="8" markerHeight="8" refX="5" refY="5">
+            <circle cx="5" cy="5" r="3" fill="black" />
+          </marker>
+          <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="black" />
+          </marker>
+        </defs>
+        <line x1="10" y1="10" x2="300" y2="200" stroke="red" stroke-width="3" marker-start="url(#circle)" marker-end="url(#arrow)" />
+      </svg>
+
+      <br>
+
+      <!-- mid marker -->
+      <svg height="250" width="350">
+        <defs>
+          <marker id="circle" markerWidth="8" markerHeight="8" refX="5" refY="5">
+            <circle cx="5" cy="5" r="2" fill="black" />
+          </marker>
+          <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+            <path d="M 0 0 L 10 5 L 0 10 z" fill="black" />
+          </marker>
+        </defs>
+        <polyline points="15,40 15,170 200,170" stroke="red" stroke-width="3" fill="none" marker-start="url(#circle)" marker-mid="url(#circle)" marker-end="url(#arrow)" />
+      </svg>
+
+      <!-- filter to blur graphic design -->
+
+      <svg height="100" width="100">
+        <defs>
+          <filter id="f1" x="0" y="0">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+          </filter>
+        </defs>
+        <rect width="90" height="90" fill="red" filter="url(#f1)" />
+      </svg>
+
+      <!-- shawdow -->
+      <svg height="110" width="110">
+        <defs>
+          <filter id="f1">
+            <feDropShadow dx="12" dy="14" stdDeviation="1" flood-opacity="0.7"/>
+          </filter>
+        </defs>
+        <rect width="90" height="90" fill="yellow" filter="url(#f1)" />
+      </svg>
+      <br>
+
+      <!-- transformations -->
+      <svg width="200" height="100">
+        <rect x="5" y="5" width="40" height="40" fill="blue" />
+        <rect x="5" y="5" width="40" height="40" fill="red" transform="translate(50 0)" />
+      </svg>
+      <br>
+      <svg width="200" height="100">
+        <rect x="5" y="5" width="40" height="40" fill="blue" />
+        <rect x="5" y="5" width="40" height="40" fill="red" transform="translate(0 50)" />
+      </svg>
+      <br>
+      <svg width="200" height="100">
+        <rect x="5" y="5" width="40" height="40" fill="blue" />
+        <rect x="5" y="5" width="40" height="40" fill="red" transform="translate(50 50)" />
+      </svg>
+      <br>
+      <!-- scaling -->
+      <svg width="200" height="100">
+        <circle cx="25" cy="25" r="20" fill="yellow" />
+        <circle cx="50" cy="25" r="20" fill="red" transform="scale(2)" />
+      </svg>
+
+      <!-- rotate -->
+      <svg width="200" height="100">
+        <rect x="50" y="5" width="40" height="40" fill="blue" transform="rotate(45)" />
+      </svg>
+
+      <!-- clipping -->
+      <svg width="200" height="100">
+        <defs>
+          <clipPath id="cut-bottom">
+            <rect x="0" y="0" width="200" height="50" />
+          </clipPath>
+        </defs>
+        <circle cx="100" cy="100" r="100" fill="red" clip-path="url(#cut-bottom)" />
+      </svg>
+
+      <!-- masking -->
+      <svg width="200" height="120">
+        <defs>
+          <mask id="mask1">
+            <rect x="0" y="0" width="100" height="50" fill="white" />
+          </mask>
+        </defs>
+        <rect x="0" y="0" width="100" height="100" fill="red" mask="url(#mask1)" />
+        <rect x="0" y="0" width="100" height="100" fill="none" stroke="black" />
+      </svg>
+      <br>
+
+      <!--animations -->
+
+      <!-- set -->
+      <svg width="200" height="100">
+        <circle cx="50" cy="50" r="25" style="fill:red;">
+        <set attributeName="r" to="50" begin="3s" />
+      </svg>
+      <br>
+
+      <!-- animate -->
+      <svg width="100%" height="100">
+        <circle cx="50" cy="50" r="50" style="fill:red;">
+          <animate
+            attributeName="cx"
+            begin="0s"
+            dur="8s"
+            from="50"
+            to="90%"
+            repeatCount="indefinite" />
+        </circle>
+      </svg>
+      <br>
+
+      <!-- <animate> with Freeze -->
+        <svg width="100%" height="100">
+            <circle cx="50" cy="50" r="50" style="fill:red;">
+              <animate
+                attributeName="cx"
+                begin="0s"
+                dur="8s"
+                from="50"
+                to="90%"
+                fill="freeze" />
+            </circle>
+          </svg>
+
+          <!-- animate transform -->
+          <svg width="200" height="180">
+            <rect x="30" y="30" height="110" width="110" style="stroke:green;fill:red">
+              <animateTransform
+                attributeName="transform"
+                begin="0s"
+                dur="10s"
+                type="rotate"
+                from="0 85 85"
+                to="360 85 85"
+                repeatCount="indefinite" />
+            </rect>
+          </svg>
+          <br>
+
+          <!-- svg using scripting -->
+
+          <svg width="200" height="100">
+            <circle id="circle1" cx="50" cy="50" r="25" style="fill:red;">
+          </svg>
+          
+          <input type="button" value="Change Radius" onclick="changeRadius()" />
+          
+          <script>
+          function changeRadius() {
+            document.getElementById("circle1").setAttribute("r", "50");
+          }
+          </script>
+          <br>
+
+          <!-- svg using sripting -change color -->
+          <svg width="200" height="100">
+            <circle id="circle2" cx="50" cy="50" r="25" style="fill:red;">
+            Sorry, your browser does not support inline SVG.
+          </svg>
+          
+          <input type="button" value="Change Style" onclick="changeStyle()" />
+          
+          <script>
+          function changeStyle() {
+            document.getElementById("circle2").style.fill="green";
+          }
+          </script>
+          <br>
+
+          <!-- change attribute value -css -->
+          <svg width="200" height="120">
+            <circle id="circle3" cx="50" cy="60" r="25" style="fill:red;">
+          </svg>
+          
+          <input type="button" value="Change Circle" onclick="changeMe()" />
+          
+          <script>
+          function changeMe() {
+            var c = document.getElementById("circle3");
+            c.setAttribute("r", "50");
+            c.setAttribute("cx", "150");
+            c.style.fill="green";
+            c.style.stroke="red";
+          }
+          </script>
+
+</body>  
 
 </html>
 

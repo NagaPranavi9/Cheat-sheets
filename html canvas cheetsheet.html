@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- The HTML <canvas> element is used to draw graphics on a web page.
+        The HTML <canvas> element is only a container for graphics. You must use a script to actually draw the graphics. -->
+    <canvas id="hi" width="10000" height="10000" style="border: 3 solid blueviolet;"></canvas>
+    <script>
+        const canvas=document.getElementById("hi");
+        const ctx = canvas.getContext("2d");
+
+        // for rectangle
+
+        ctx.fillStyle="red";
+        ctx.fillRect(0,0,250,100);
+
+        ctx.clearRect(60,35, 50,50);
+
+        ctx.strokeStyle = "blue";
+        ctx.lineWidth=5;
+        ctx.strokeRect(0,0,250,100);
+
+        // for line
+        ctx.moveTo(300,0);
+        ctx.lineTo(500, 100);
+        ctx.lineWidth=10;
+        ctx.strokeStyle="red";
+        ctx.lineCap="round";
+        ctx.stroke();
+
+        // for circle
+        // beginPath() - begins a path
+        // arc(x, y, r, startangle, endangle) - creates an arc/curve. 
+        // To create a circle with arc(): Set startangle to 0 and endangle to 2*Math.PI.
+        ctx.beginPath();
+        ctx.arc(700,100,50,0,2*Math.PI);
+        ctx.stroke();
+
+        // different shapes
+        ctx.beginPath();
+        ctx.moveTo(20,20);
+        ctx.lineTo(100,20);
+        ctx.lineTo(175,100);
+        ctx.lineTo(20,100);
+        ctx.lineTo(20,20);
+        ctx.stroke();
+
+        // rect and traingle
+         ctx.beginPath();
+
+    // Define a rectangle
+        ctx.moveTo(20,20);
+        ctx.lineTo(180,20);
+        ctx.lineTo(180,100);
+        ctx.lineTo(20,100);
+        ctx.lineTo(20,20);
+
+        // Define a triangle
+        ctx.moveTo(100,20);
+        ctx.lineTo(180,100);
+        ctx.lineTo(20,100);
+        ctx.lineTo(100,20);
+
+        ctx.strokeStyle = "red";
+        ctx.stroke();
+
+    </script>
+    
+</body>
+</html>
