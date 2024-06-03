@@ -69,6 +69,56 @@
         ctx.strokeStyle = "red";
         ctx.stroke();
 
+
+        // quadeatic curve
+        ctx.beginPath();
+        ctx.moveTo(10, 100);
+        ctx.quadraticCurveTo(250, 170, 230, 20);
+        ctx.stroke(); 
+
+        //stroke text
+        ctx.font = "50px Arial";
+        ctx.strokeText("Hello World",10,80);
+        
+        // stroke with italic
+        ctx.font = "bold italic 50px Arial";
+        ctx.strokeText("Hello World",10,80);
+// ----------------------------------------------------------
+        // Shadow
+        ctx.shadowColor = "lightblue";
+        ctx.shadowOffsetX = 10;
+        ctx.shadowOffsetY = 10;
+
+        // Filled rectangle
+        ctx.fillStyle = "blue";
+        ctx.fillRect(20, 20, 100, 100);
+
+        // Stroked rectangle
+        ctx.lineWidth = 4;
+        ctx.strokeStyle = "blue";
+        ctx.strokeRect(170, 20, 100, 100);
+// --------------------------------------------------------
+        // Shadow
+        ctx.shadowColor = "lightblue";
+        ctx.shadowOffsetX = 5;
+        ctx.shadowOffsetY = 5;
+
+        ctx.font = "50px Arial";
+
+        // Filled text
+        ctx.fillStyle = "purple";
+        ctx.fillText("Hello World",10,60);
+
+        // Stroked text
+        ctx.strokeStyle = "purple";
+        ctx.strokeText("Hello World",10,120);
+        // ------------------------------------------------------
+
+        const image = canvas.getElementById("scream");
+        image.addEventListener("load",(e) => {ctx.drawImage(image,10,10)});
+
+        
+
     </script>
     
 </body>
